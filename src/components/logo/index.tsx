@@ -1,8 +1,10 @@
-import {Box, Heading} from '@chakra-ui/react'
+import {Heading, HStack, Image} from '@chakra-ui/react'
 export const Logo = () => {
   return (
-    <Box p={8} pb={4}>
-      <Heading>OpenPay</Heading>
-    </Box>
+    <HStack spacing="4">
+      <Image src="/images/openpay-logo.png" alt="openpay" />
+
+      <Heading fontSize="12px">OpenPay</Heading>
+    </HStack>
   )
 }
