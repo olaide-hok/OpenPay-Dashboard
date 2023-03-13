@@ -8,7 +8,7 @@ type Props = {}
 
 const App = (props: Props) => {
   return (
-    <HStack width="full" flex={1} overflow="hidden">
+    <HStack width="full" h="100vh" flex={1} overflow="hidden">
       <Sidebar />
       <VStack>
         {/* Search Icon, Bell icon, Avatar */}
