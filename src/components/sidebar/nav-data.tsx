@@ -4,49 +4,57 @@ import MessagesIcon from './sidebar-icons/messages-icon.svg'
 import WalletsIcon from './sidebar-icons/myWallet-icon.svg'
 import ActivityIcon from './sidebar-icons/activity-icon.svg'
 import AnalyticsIcon from './sidebar-icons/analytics-icon.svg'
+import InfoIcon from './sidebar-icons/get-help.svg'
+import SettingsIcon from './sidebar-icons/settings.svg'
 
 interface NavItems {
-  type: 'link'
   href: string
   label: string
   icon: React.FunctionComponent
 }
 
-export const navItems: NavItems[] = [
+export const navItems1: NavItems[] = [
   {
-    type: 'link',
     href: '/',
     icon: DashboardIcon,
     label: 'Dashboard',
   },
   {
-    type: 'link',
     href: '/invoices',
     icon: InvoicesIcon,
     label: 'Invoices',
   },
   {
-    type: 'link',
     href: '/messages',
     icon: MessagesIcon,
     label: 'Messages',
   },
   {
-    type: 'link',
     href: '/wallets',
     icon: WalletsIcon,
     label: 'My Wallets',
   },
   {
-    type: 'link',
     href: '/activity',
     icon: ActivityIcon,
     label: 'Activity',
   },
   {
-    type: 'link',
     label: 'Analytics',
     icon: AnalyticsIcon,
     href: '/analytics',
+  },
+]
+
+export const navItems2: NavItems[] = [
+  {
+    href: '/get-help',
+    icon: InfoIcon,
+    label: 'Get Help',
+  },
+  {
+    label: 'Settings',
+    icon: SettingsIcon,
+    href: '/settings',
   },
 ]
