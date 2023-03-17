@@ -4,19 +4,17 @@ import RecentContacts from './recent-contacts'
 import RecentTrans from './recent-trans'
 import Statistics from './statistics'
 
-type Props = {}
-
-const MoneyFlow = (props: Props) => {
+const MoneyFlow = () => {
   return (
-    <VStack>
+    <VStack alignItems="flex-start" justifyContent="space-between" w="full">
       {/* Graph and Recent Contact */}
-      <HStack>
+      <HStack w="full" justifyContent="space-between" alignItems="flex-start">
         {/* Graph */}
         <Graph />
         {/* Recent Contact */}
         <RecentContacts />
       </HStack>
-      <VStack>
+      <VStack alignItems="flex-start" w="full">
         {/* Recent Transactions */}
         <RecentTrans />
         {/* Statistics */}
