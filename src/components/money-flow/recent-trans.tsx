@@ -1,4 +1,12 @@
-import {Flex, HStack, Image, Link, Text, VStack} from '@chakra-ui/react'
+import {
+  Flex,
+  Heading,
+  HStack,
+  Image,
+  Link,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
 import Btn from '../Button'
 import {recentTransData} from './recent-trans-data'
 
@@ -13,7 +21,7 @@ interface TransItemProps {
 
 const TransItem = ({img, alt, label, date, amt, desc}: TransItemProps) => {
   return (
-    <Flex justifyContent="space-between">
+    <Flex alignItems="flex-start" justifyContent="space-between" w="full">
       <HStack spacing="12px">
         <Image src={img} alt={alt} />
         <Text fontSize="10px">{desc}</Text>
@@ -29,29 +37,28 @@ type Props = {}
 
 const RecentTrans = (props: Props) => {
   return (
-    <VStack alignItems="flex-start">
+    <VStack alignItems="flex-start" justifyContent="space-between" w="full">
       <HStack justifyContent="space-between" w="full">
-        <Text fontSize="15px">Recent Transactions</Text>
+        <Heading fontSize="15px">Recent Transactions</Heading>
         <Text fontSize="10px" as={Link}>
           View all
         </Text>
       </HStack>
-      <VStack>
-        {recentTransData.map((recentTrans) => {
-          const {img, alt, btnType, date, amt, desc} = recentTrans
-          return (
-            <TransItem
-              img={img}
-              alt={alt}
-              label={btnType}
-              date={date}
-              amt={amt}
-              desc={desc}
-              key={alt}
-            />
-          )
-        })}
-      </VStack>
+
+      {recentTransData.map((recentTrans) => {
+        const {img, alt, btnType, date, amt, desc} = recentTrans
+        return (
+          <TransItem
+            img={img}
+            alt={alt}
+            label={btnType}
+            date={date}
+            amt={amt}
+            desc={desc}
+            key={alt}
+          />
+        )
+      })}
     </VStack>
   )
 }
