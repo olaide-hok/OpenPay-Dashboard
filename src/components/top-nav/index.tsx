@@ -12,11 +12,11 @@ const TopNav = () => {
       pt="20px">
       <HStack spacing="20px">
         {/* Search Icon */}
-        <SearchIcon />
+        <SearchIcon color="#C1C1C1" />
         {/* Bell and badge Icon */}
         <Image src="/images/bell-badge.png" alt="bell-badge-icon" />
         {/* Avatar */}
-        <AvatarComponent src="/images/derick.png" name="derick" />
+        <AvatarComponent src="/images/derick.png" name="derick" size="xs" />
       </HStack>
     </Box>
   )
