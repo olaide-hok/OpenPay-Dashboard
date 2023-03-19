@@ -1,9 +1,12 @@
-import React from 'react'
+import {Avatar} from '@chakra-ui/react'
 
-type Props = {}
-
-const Avatar = (props: Props) => {
-  return <div>Avatar</div>
+interface AvatarProps {
+  name: string
+  src: string
 }
 
-export default Avatar
+const AvatarComponent = ({name, src}: AvatarProps) => {
+  return <Avatar name={name} src={src} size="xs" />
+}
+
+export default AvatarComponent
