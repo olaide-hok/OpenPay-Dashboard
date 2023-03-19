@@ -201,6 +201,7 @@ const MyCard = () => {
                 const {src, alt, variant, label} = action
                 return (
                   <ActionTile
+                    key={alt}
                     src={src}
                     alt={alt}
                     label={label}
