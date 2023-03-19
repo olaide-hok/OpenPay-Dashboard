@@ -1,4 +1,5 @@
 import {
+  Box,
   Flex,
   Heading,
   HStack,
@@ -21,7 +22,11 @@ interface TransItemProps {
 
 const TransItem = ({img, alt, label, date, amt, desc}: TransItemProps) => {
   return (
-    <Flex alignItems="flex-start" justifyContent="space-between" w="full">
+    <Flex
+      alignItems="flex-start"
+      justifyContent="space-between"
+      w="full"
+      mb="20px">
       <HStack spacing="12px">
         <Image src={img} alt={alt} />
         <Text fontSize="10px">{desc}</Text>
@@ -33,32 +38,36 @@ const TransItem = ({img, alt, label, date, amt, desc}: TransItemProps) => {
   )
 }
 
-type Props = {}
-
-const RecentTrans = (props: Props) => {
+const RecentTrans = () => {
   return (
-    <VStack alignItems="flex-start" justifyContent="space-between" w="full">
+    <VStack
+      alignItems="flex-start"
+      justifyContent="space-between"
+      w="full"
+      h="full"
+      spacing="20px">
       <HStack justifyContent="space-between" w="full">
         <Heading fontSize="15px">Recent Transactions</Heading>
         <Text fontSize="10px" as={Link}>
           View all
         </Text>
       </HStack>
-
-      {recentTransData.map((recentTrans) => {
-        const {img, alt, btnType, date, amt, desc} = recentTrans
-        return (
-          <TransItem
-            img={img}
-            alt={alt}
-            label={btnType}
-            date={date}
-            amt={amt}
-            desc={desc}
-            key={alt}
-          />
-        )
-      })}
+      <Box w="full">
+        {recentTransData.map((recentTrans) => {
+          const {img, alt, btnType, date, amt, desc} = recentTrans
+          return (
+            <TransItem
+              img={img}
+              alt={alt}
+              label={btnType}
+              date={date}
+              amt={amt}
+              desc={desc}
+              key={alt}
+            />
+          )
+        })}
+      </Box>
     </VStack>
   )
 }
