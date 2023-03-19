@@ -20,6 +20,7 @@ const Statistics = () => {
             const {src, alt, variant, label, amt} = stat
             return (
               <ActionTile
+                key={alt}
                 src={src}
                 alt={alt}
                 amt={amt}
