@@ -7,10 +7,11 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
+  Select,
   Text,
   VStack,
 } from '@chakra-ui/react'
-import {ChevronDownIcon, SmallAddIcon} from '@chakra-ui/icons'
+import {SmallAddIcon} from '@chakra-ui/icons'
 import Btn from '../Button'
 import ActionTile from '../action-tile'
 import {actionData} from './action-tile-data'
@@ -39,12 +40,15 @@ const MyCard = () => {
                 <Text fontSize="9px">Name</Text>
                 <Heading fontSize="13px">Carla Rosser</Heading>
               </VStack>
-              <HStack spacing="100px" alignItems="flex-start">
+              <HStack
+                justifyContent="space-between"
+                w="full"
+                alignItems="flex-start">
                 <VStack alignItems="flex-start">
                   <Text fontSize="10px">1200 01452 54215</Text>
                   <Heading fontSize="8px">08/23</Heading>
                 </VStack>
-                <Heading fontSize="10px">VISA</Heading>
+                <Image src="/images/visa-logo.png" alt="visa" />
               </HStack>
             </VStack>
           </Box>
@@ -52,7 +56,9 @@ const MyCard = () => {
 
         {/* Send Money Button */}
         <Box w="full">
-          <Heading fontSize="16px">Send Money</Heading>
+          <Heading fontSize="16px" mb="10px">
+            Send Money
+          </Heading>
           <HStack
             borderRadius="10px"
             py="4"
@@ -65,15 +71,48 @@ const MyCard = () => {
               <Image src="/images/mastercard-logo.png" alt="mastercard-logo" />
               <Text>Debit</Text>
             </HStack>
-            <HStack spacing="20px">
-              <Text>
+            {/* Dropdown */}
+            <Select
+              placeholder="$10.680"
+              borderRadius="25px"
+              border="none"
+              fontSize="16px"
+              w="165px">
+              <option value="option1">
                 <Text as={'span'} color="#A4B4CB">
                   $
                 </Text>
-                10.680
-              </Text>
-              <ChevronDownIcon />
-            </HStack>
+                10.790
+              </option>
+              <option value="option2">
+                {' '}
+                <Text as={'span'} color="#A4B4CB">
+                  $
+                </Text>
+                10.810
+              </option>
+              <option value="option3">
+                {' '}
+                <Text as={'span'} color="#A4B4CB">
+                  $
+                </Text>
+                10.911
+              </option>
+              <option value="option2">
+                {' '}
+                <Text as={'span'} color="#A4B4CB">
+                  $
+                </Text>
+                10.102
+              </option>
+              <option value="option3">
+                {' '}
+                <Text as={'span'} color="#A4B4CB">
+                  $
+                </Text>
+                10.113
+              </option>
+            </Select>
           </HStack>
 
           {/* Enter Amount Input */}
@@ -96,7 +135,7 @@ const MyCard = () => {
                   fontSize="21px"
                   children="$"
                 />
-                <Input placeholder="800.00" />
+                <Input fontSize="21px" placeholder="800.00" />
                 <InputRightElement
                   children={
                     <>
@@ -135,28 +174,61 @@ const MyCard = () => {
           <VStack spacing="13px" alignItems="flex-start">
             <Heading fontSize="11px">Quick transfer</Heading>
             <HStack
-              borderRadius="10px"
-              py="4"
-              px="4"
-              spacing="45px"
-              mb="20px"
+              alignItems="center"
+              borderRadius="7px"
+              border="0.566969px solid #F6F8FB"
+              p="10px"
+              justifyContent="space-between"
               bg="white">
-              <HStack spacing="11px">
+              <HStack alignItems="flex-start" spacing="11px">
                 <Image
                   src="/images/mastercard-logo.png"
                   alt="mastercard-logo"
                 />
                 <Text>Debit</Text>
               </HStack>
-              <HStack spacing="20px">
-                <Text>
+              {/* Dropdown */}
+              <Select
+                placeholder="$10.432"
+                borderRadius="25px"
+                border="none"
+                fontSize="16px"
+                w="105px">
+                <option value="option1">
                   <Text as={'span'} color="#A4B4CB">
                     $
                   </Text>
-                  10,432
-                </Text>
-                <ChevronDownIcon />
-              </HStack>
+                  10.790
+                </option>
+                <option value="option2">
+                  {' '}
+                  <Text as={'span'} color="#A4B4CB">
+                    $
+                  </Text>
+                  10.810
+                </option>
+                <option value="option3">
+                  {' '}
+                  <Text as={'span'} color="#A4B4CB">
+                    $
+                  </Text>
+                  10.911
+                </option>
+                <option value="option2">
+                  {' '}
+                  <Text as={'span'} color="#A4B4CB">
+                    $
+                  </Text>
+                  10.102
+                </option>
+                <option value="option3">
+                  {' '}
+                  <Text as={'span'} color="#A4B4CB">
+                    $
+                  </Text>
+                  10.113
+                </option>
+              </Select>
             </HStack>
 
             {/* Enter Amount Input */}
