@@ -1,4 +1,3 @@
-import './styles.css'
 import {Container, HStack, VStack} from '@chakra-ui/react'
 import MoneyFlow from './components/money-flow'
 import MyCard from './components/mycard'
