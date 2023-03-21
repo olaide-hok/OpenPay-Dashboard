@@ -3,15 +3,15 @@ import {Logo} from '../logo'
 import {navItems1, navItems2} from './nav-data'
 import NavItem from './nav-item'
 
-export const Sidebar = () => {
+const Sidebar = () => {
   return (
     <VStack
       alignItems="flex-start"
       justifyContent="space-between"
       width="full"
       height="full"
-      maxW={{base: 56, '2xl': 72}}
-      borderRightColor="#E8ECF5"
+      maxW={{base: 'none', md: 44}}
+      borderRightColor={{base: 'none', lg: '#E8ECF5'}}
       borderRightWidth={2}
       flexShrink={0}
       pl="5"
@@ -46,3 +46,5 @@ export const Sidebar = () => {
     </VStack>
   )
 }
+
+export default Sidebar
