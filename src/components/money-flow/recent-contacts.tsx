@@ -16,9 +16,12 @@ import {recentContacts} from './recent-contacts-data'
 
 const RecentContacts = () => {
   return (
-    <VStack alignItems="flex-start" w="full">
-      <Flex justifyContent="space-between" w="full">
-        <Heading fontSize="13px">Recent Contacts</Heading>
+    <VStack alignItems="flex-start" w="full" spacing="24px">
+      <HStack justifyContent="space-between" w="full">
+        <VStack alignItems="flex-start">
+          <Heading fontSize="13px">Recent Contacts</Heading>
+          <Text fontSize="10px">18 recipients</Text>
+        </VStack>
         {/* Pen and Search Icon */}
         <HStack alignItems="flex-start" spacing="20px">
           {/* Pencil Icon */}
@@ -26,8 +29,8 @@ const RecentContacts = () => {
           {/* Search Icon */}
           <SearchIcon color="#0177FB" />
         </HStack>
-      </Flex>
-      <Text fontSize="10px">18 recipients</Text>
+      </HStack>
+
       {/* Contact Avatar Slider */}
       <HStack
         overflowX="auto"
@@ -44,14 +47,19 @@ const RecentContacts = () => {
       </HStack>
       {/* Group Party  */}
       <Box
-        // spacing="24px"
+        boxShadow="2xl"
+        p="6"
+        rounded="md"
+        bg="white"
         px="16.5px"
         pb="17px"
         pt="14px"
         justifyContent="space-between"
         w="full">
-        <VStack alignItems="flex-start" spacing="11px" mb="24px">
-          <Text>Group Party</Text>
+        <Text fontSize="12" mb="12px">
+          Group Party
+        </Text>
+        <VStack alignItems="flex-start" spacing="24px">
           {/* Group of Avatar */}
           <AvatarGroup size="sm" max={3}>
             <Avatar name="gp-3" src="/images/group-party/gp-3.png" />
@@ -63,25 +71,28 @@ const RecentContacts = () => {
             <Avatar name="gp-5" src="/images/group-party/gp-5.png" />
             <Avatar name="gp-6" src="/images/group-party/gp-6.png" />
           </AvatarGroup>
-        </VStack>
-        {/* Dakota Milk */}
-        <HStack alignItems="flex-start" justifyContent="space-between" w="full">
-          <HStack alignItems="flex-start" spacing="12px">
-            <AvatarComponent
-              src="/images/dakota-milk.png"
-              name="dakota milk"
-              size="md"
-            />
-            <VStack alignItems="flex-start" alignSelf="center">
-              <Heading fontSize="12px">Dakota Milk</Heading>
-              <Text fontSize="10px" color="#7D8DA6">
-                $420.00
-              </Text>
-            </VStack>
+          {/* Dakota Milk */}
+          <HStack
+            alignItems="flex-start"
+            justifyContent="space-between"
+            w="full">
+            <HStack alignItems="flex-start" spacing="12px">
+              <AvatarComponent
+                src="/images/dakota-milk.png"
+                name="dakota milk"
+                size="md"
+              />
+              <VStack alignItems="flex-start" alignSelf="center">
+                <Heading fontSize="12px">Dakota Milk</Heading>
+                <Text fontSize="10px" color="#7D8DA6">
+                  $420.00
+                </Text>
+              </VStack>
+            </HStack>
+            {/* Chevron Right Icon */}
+            <ChevronRightIcon boxSize={6} color="#A5B4CB" />
           </HStack>
-          {/* Chevron Right Icon */}
-          <ChevronRightIcon boxSize={6} color="#A5B4CB" />
-        </HStack>
+        </VStack>
       </Box>
     </VStack>
   )
