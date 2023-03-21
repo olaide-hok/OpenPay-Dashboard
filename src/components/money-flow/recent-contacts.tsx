@@ -3,10 +3,12 @@ import {
   Avatar,
   AvatarGroup,
   Box,
-  Flex,
   Heading,
   HStack,
   Icon,
+  Input,
+  InputGroup,
+  InputRightElement,
   Text,
   VStack,
 } from '@chakra-ui/react'
@@ -24,10 +26,25 @@ const RecentContacts = () => {
         </VStack>
         {/* Pen and Search Icon */}
         <HStack alignItems="flex-start" spacing="20px">
-          {/* Pencil Icon */}
-          <Icon as={HiPencil} color="#BCCDE1" />
-          {/* Search Icon */}
-          <SearchIcon color="#0177FB" />
+          <InputGroup>
+            <Input
+              pr="10px"
+              border="none"
+              htmlSize={6}
+              width="auto"
+              size="md"
+            />
+            <InputRightElement
+              children={
+                <>
+                  {/* Pencil Icon */}
+                  <Icon as={HiPencil} color="#BCCDE1" mr="10px" />
+                  {/* Search Icon */}
+                  <SearchIcon color="#0177FB" />
+                </>
+              }
+            />
+          </InputGroup>
         </HStack>
       </HStack>
 
