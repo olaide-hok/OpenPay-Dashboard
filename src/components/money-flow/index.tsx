@@ -24,7 +24,7 @@ const MoneyFlow = () => {
           {/* Recent Contact */}
           <RecentContacts />
         </HStack>
-        <VStack alignItems="flex-start" w="full" spacing="40px">
+        <VStack alignItems="flex-start" w="full" spacing="30px">
           {/* Recent Transactions */}
           <RecentTrans />
           {/* Statistics */}
