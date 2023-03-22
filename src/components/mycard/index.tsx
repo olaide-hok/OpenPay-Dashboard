@@ -18,10 +18,7 @@ import {actionData} from './action-tile-data'
 
 const MyCard = () => {
   return (
-    <Box
-      pl={{base: '', lg: '22px'}}
-      pb={{base: '', lg: '53px'}}
-      maxW={{base: 56, lg: '256px'}}>
+    <Box pl={{base: '', lg: '22px'}} maxW={{base: 56, lg: '256px'}}>
       <VStack alignItems="flex-start" spacing="25px">
         <Box w="full">
           <Heading mb="25px" fontSize="18px">
